@@ -16,6 +16,19 @@ def init_repo(repo_url):
     else:
         print("Git repo already initialized.")
 
+        
+def init_repo(repo_url):
+    if not os.path.exists(".git"):
+        run(["git", "init"])
+        run(["git", "branch", "-M", "main"])
+        run(["git", "remote", "add", "origin", repo_url])
+    else:
+        # Update existing remote
+        run(["git", "remote", "remove", "origin"])
+        run(["git", "remote", "add", "origin", repo_url])
+
+    print(f"Using remote repository: {repo_url}")
+
 
 def make_commit(commit_date, message="pixel"):
     env = os.environ.copy()
