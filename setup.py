@@ -7,15 +7,6 @@ from datetime import datetime, timedelta
 def run(cmd, env=None):
     subprocess.run(cmd, check=True, env=env)
 
-
-def init_repo(repo_url):
-    if not os.path.exists(".git"):
-        run(["git", "init"])
-        run(["git", "branch", "-M", "main"])
-        run(["git", "remote", "add", "origin", repo_url])
-    else:
-        print("Git repo already initialized.")
-
         
 def init_repo(repo_url):
     if not os.path.exists(".git"):
