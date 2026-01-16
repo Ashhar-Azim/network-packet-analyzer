@@ -90,11 +90,13 @@ cd network-packet-analyzer
 ``` 
 
 2️⃣ Install dependencies
-```pip install -r requirements.txt
+```
+pip install -r requirements.txt
 ```
 
 3️⃣ Run the analyzer
-```python src/main.py
+```
+python src/main.py
 ```
 
 ⚠️ Some packet capture features may require administrator/root privileges.
